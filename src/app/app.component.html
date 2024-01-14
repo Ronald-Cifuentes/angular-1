@@ -1,13 +1,20 @@
 <main class="main">
   <h1>Running app! ✨</h1>
-</main>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <h2>1. Interpolation</h2>
+  <h3>value 1: {{ name.value }}</h3>
+  <h3>Text: <input type="text" #name (keyup)="(0)" /></h3>
+
+  <h3>value2: {{ value2 }}</h3>
+  <h3>Text: <input type="text" (input)="setValue2($event)" /></h3>
+
+  <h2>2. Text and Event binding</h2>
+  <input type="checkbox" id="" (change)="setCheck($event)" />
+  {{ check === "text 1" ? null : "Hola" }}
+
+  <h2>3. Two way binding - banana in the box 🍌📦</h2>
+  <h3>value3: {{ value3 }}</h3>
+  <h3>Text: <input type="text" [(ngModel)]="value3" /></h3>
+</main>
 
 <router-outlet></router-outlet>
